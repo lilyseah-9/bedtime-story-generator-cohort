@@ -12,7 +12,7 @@ Get a free Gemini API key at <https://aistudio.google.com/apikey> first.
 
 ```bash
 # from inside this folder (dist/module_01_swap_to_gemini/) — macOS / Linux / WSL2 Ubuntu:
-source ../../venv/bin/activate    # only if (venv) isn't already in your prompt
+source ../venv/bin/activate    # only if (venv) isn't already in your prompt
 cp .env.example .env              # this folder's contract: GEMINI_API_KEY-only (Ollama vars gone)
 # edit .env to paste your real key from https://aistudio.google.com/apikey
 uvicorn app.main:app --reload

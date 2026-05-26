@@ -16,7 +16,7 @@ ok "Virtual environment active ($VIRTUAL_ENV)"
 # 2. Python 3.11+.
 py_version=$(python --version 2>&1 | awk '{print $2}')
 case "$py_version" in
-    3.11.*|3.12.*|3.13.*) ok "Python $py_version" ;;
+    3.11.*|3.12.*|3.13.*|3.14.*) ok "Python $py_version" ;;
     *) fail "Python 3.11+ required, found $py_version" ;;
 esac
 
