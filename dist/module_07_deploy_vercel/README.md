@@ -63,7 +63,7 @@ Render and Vercel deploy by **reading from a GitHub repo they have access to** �
 - After the first deploy completes, go to the service's *Environment* tab and set `GEMINI_API_KEY` to your Google AI Studio key. (Marked `sync: false` in `render.yaml` so it's not committed.)
 - Apply the schema migration once. In the Render dashboard, click your `bedtime-story-db` card → **Connect** → copy the **External Database URL** (reachable from your laptop; the password is embedded — treat it like an API key). Then from your local terminal:
   ```bash
-  psql "<paste-the-External-Database-URL-here>" -f sql/002_create_stories.sql
+  psql "postgresql://bedtime_story_db_tyl3_user:0jqDmKkU9rZhJVIP6mLscpWNLNszjGId@dpg-d8amho6l51nc73f4c4t0-a.oregon-postgres.render.com/bedtime_story_db_tyl3" -f sql/002_create_stories.sql
   ```
   Expected output: `DROP TABLE`, `CREATE TABLE`, `CREATE INDEX`. (If the dashboard shows an in-browser SQL shell instead, that works too — copy the contents of `sql/002_create_stories.sql` into it.)
 - Note your service's URL — looks like `https://bedtime-story-api.onrender.com`.
